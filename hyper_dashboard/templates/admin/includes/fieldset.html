@@ -7,7 +7,7 @@
     {% for line in fieldset %}
         {% with is_single=line.fields|length_is:'1' %}
 
-            <div class="form-group focused row form-row {% if is_single and line.errors or field.errors %} has-danger errors{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endfor %}">
+            <div class="form-group row form-row {% if is_single and line.errors or field.errors %} has-danger errors{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endfor %}">
 
                 {% for field in line %}
                     {% if is_single or forloop.first %}

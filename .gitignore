@@ -1,3 +1,13 @@
+*.py[co]
+*.egg*
+*.swp
+*~
+*.log
 .idea
+docs/_build/
+/build
+/dist/
+/bower_components/
+/node_modules/
+/env/
 venv
-__pychache__
