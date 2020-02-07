@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+core/__init__.py
+core/admin.py
+core/escolhas.py
+core/fields.py
+core/models.py
+core/settings.py
+core/urls.py
+core/widgets.py
+core/wsgi.py
+django_hyper_dashboard.egg-info/PKG-INFO
+django_hyper_dashboard.egg-info/SOURCES.txt
+django_hyper_dashboard.egg-info/dependency_links.txt
+django_hyper_dashboard.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+  <div class="page-title">
+     {{opts.verbose_name_plural}}
+  </div>
+{{ block.super }}
+{% endblock %}

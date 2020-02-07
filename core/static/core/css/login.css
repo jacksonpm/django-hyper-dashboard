@@ -1,0 +1,39 @@
+html {
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+div .fa {
+    position: relative;
+    left: 12px;
+    top: 28px;
+    color: #131313;
+}
+
+.form-row input {
+    padding-left: 33px !important;
+    margin-bottom: 0rem !important;
+}
+
+body {
+    background-color: #ffffff00 !important;
+}
+
+.suit-login-graphic {
+    text-align: center;
+}
+
+body.login .suit-login-graphic {
+   margin-top: 24px !important;
+   margin-bottom: -30px !important;
+}
+
+#header {
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
+}
+
+#container {
+    min-height: 0px;
+}

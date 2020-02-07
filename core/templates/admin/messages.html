@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load tag_notification %}
+{% if messages %}
+    <div class="messagelist">
+        <script>
+                window.onload = function() {
+                    {% for message in messages %}
+                        {% notification message as notificacao %}
+
+                        $.NotificationApp.send(
+                            '{{ notificacao.titulo }}',
+                            '{{ notificacao.conteudo }}',
+                            'bottom-right',
+                            'rgba(255,255,255)',
+                            '{{ notificacao.icon }}',
+                        );
+
+                    {% endfor %}
+                };
+        </script>
+    </div>
+{% endif %}
