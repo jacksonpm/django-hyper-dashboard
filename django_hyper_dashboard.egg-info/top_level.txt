@@ -1,1 +1,1 @@
-core
+hyper_dashboard
