@@ -8,7 +8,7 @@ try:
     from django.urls import reverse, resolve
 except:
     from django.core.urlresolvers import reverse, resolve
-from suit.menu import MenuManager
+from hyper_dashboard.menu import MenuManager
 
 register = template.Library()
 

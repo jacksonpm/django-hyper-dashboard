@@ -4,8 +4,8 @@ from django.template import Context
 from django.template.loader import get_template
 from django.utils.safestring import mark_safe
 from django.contrib.admin.views.main import SEARCH_VAR
-from suit.apps import ALL_FIELDS
-from suit.compat import parse_qs
+from hyper_dashboard.apps import ALL_FIELDS
+from hyper_dashboard.compat import parse_qs
 
 register = template.Library()
 

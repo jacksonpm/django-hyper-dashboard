@@ -1,7 +1,7 @@
 import django
 from django import template
 from django.utils.safestring import mark_safe
-from suit import config
+from hyper_dashboard import config
 
 register = template.Library()
 

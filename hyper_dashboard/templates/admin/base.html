@@ -57,7 +57,6 @@
 {% endblock %}
 
 {% block footer %}
-{#    </div> <!-- Put footer outside #container -->#}
     {% if not is_popup %}
         <div id="footer">
         <footer class="footer">
@@ -106,9 +105,8 @@
                 Suit.$(function () {
                     Suit.$('#suit_form_tabs').suitFormTabs();
                 });
-            {% endif %
+            {% endif %}
         </script>
     {% endif %}
 
-{#    <div> <!-- Fix/close div previously closed by footer -->#}
 {% endblock %}
