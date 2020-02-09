@@ -1,6 +1,6 @@
 from django.apps import apps
 from django.template import VariableDoesNotExist
-from suit.apps import DjangoSuitConfig
+from hyper_dashboard.apps import DjangoSuitConfig
 
 
 def get_config_instance(app_name=None):
@@ -8,12 +8,12 @@ def get_config_instance(app_name=None):
     :rtype: DjangoSuitConfig()
     """
     try:
-        config = apps.get_app_config(app_name or 'suit')
+        config = apps.get_app_config(app_name or 'hyper_dashboard')
         if isinstance(config, DjangoSuitConfig):
             return config
     except LookupError:
         pass
-    return apps.get_app_config('suit')
+    return apps.get_app_config('hyper_dashboard')
 
 
 #: :type: DjangoSuitConfig()

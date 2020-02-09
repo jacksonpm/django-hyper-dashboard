@@ -18,8 +18,8 @@ SUIT_FORM_SIZE_FULL = (SUIT_FORM_SIZE_LABEL, 'col-xs-12 col-sm-9 col-md-10')
 
 
 class DjangoSuitConfig(AppConfig):
-    name = 'suit'
-    verbose_name = 'Django Suit'
+    name = 'hyper_dashboard'
+    verbose_name = 'Hyper Dashboard'
     django_version = get_version()
     version = VERSION
 
