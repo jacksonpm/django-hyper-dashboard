@@ -1,16 +1,22 @@
 {% load static %}
-<div class="navbar-custom topnav-navbar topnav-navbar-dark">
+<div class="navbar-custom topnav-navbar topnav-navbar-dark" style="background-color: {{ color }}">
     <div class="container-fluid">
 
         <!-- LOGO -->
         <a href="" class="topnav-logo">
-                                <span class="topnav-logo-lg">
-                                    <img src="{% static 'appclinica/img/white.png' %}" alt="" height="32">
-                                </span>
+            <span class="topnav-logo-lg">
+                <img src="{{ logo }}" alt="" height="32">
+            </span>
             <span class="topnav-logo-sm">
-                                    <img src="{% static 'appclinica/img/white.png' %}" alt="" height="32">
-                                </span>
+                <img src="{{ logo }}" alt="" height="32">
+            </span>
         </a>
+
+        <div class="nav-nome">
+            <label class="label-nome">
+                {{ info }}
+            </label>
+        </div>
 
         <ul class="list-unstyled topbar-right-menu float-right mb-0">
 
@@ -18,13 +24,13 @@
                 <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" id="topbar-userdrop"
                    href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                         <span class="account-user-avatar">
-                                            <img src="/media/{{ request.user.avatar }}" alt="user-image"
+                                            <img src="{{ avatar }}" alt="user-image"
                                                  class="rounded-circle">
                                         </span>
                     <span>
-                                            <span class="account-user-name">Dominic Keller</span>
-                                            <span class="account-position">Founder</span>
-                                        </span>
+                        <span class="account-user-name">{{ username }}</span>
+                        <span class="account-position">{{ subtitle }}</span>
+                    </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
                      aria-labelledby="topbar-userdrop" style="">
@@ -34,35 +40,12 @@
                     </div>
 
                     <!-- item-->
-                    <a href="/usuarios/perfil/" class="dropdown-item notify-item">
-                        <i class="mdi mdi-account-circle mr-1"></i>
-                        <span>Minha Conta</span>
+                    {% for label, url, icon in menu %}
+                    <a href="{{url}}" class="dropdown-item notify-item">
+                        <i class="mdi {{icon}} mr-1"></i>
+                        <span>{{ label }}</span>
                     </a>
-
-                    <!-- item-->
-                    <a href="/usuarios/convite/" class="dropdown-item notify-item">
-                        <i class="mdi mdi-comment-account mr-1"></i>
-                        <span>Meus Convites</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="/usuarios/convite/" class="dropdown-item notify-item">
-                        <i class="mdi mdi-account-edit mr-1"></i>
-                        <span>Minha Agenda</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <i class="mdi mdi-key-outline mr-1"></i>
-                        <span>Alterar Senha</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="/logout/" class="dropdown-item notify-item">
-                        <i class="mdi mdi-logout mr-1"></i>
-                        <span>Logout</span>
-                    </a>
-
+                    {% endfor %}
                 </div>
             </li>
 
