@@ -547,10 +547,6 @@ body.suit_layout_horizontal #header #branding, body.suit_layout_horizontal #head
     background-color: #ffffff00 !important;
 }
 
-.topnav-navbar .topnav-logo {
-    line-height: 48px !important;
-}
-
 .bootstrap-select .dropdown-menu li a {
     font-size: medium;
 }

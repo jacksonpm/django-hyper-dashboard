@@ -6,3 +6,8 @@
     font-size: 15px;
     color: #fff;
 }
+
+.topnav-navbar .topnav-logo {
+    line-height: 48px !important;
+    margin-left: -12px;
+}
