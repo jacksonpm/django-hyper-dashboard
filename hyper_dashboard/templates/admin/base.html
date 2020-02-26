@@ -97,10 +97,14 @@
     {% if cl.formset or action_form and 'toggle_changelist_top_actions'|suit_conf:request %}
         <script type="text/javascript">
             Suit.ListActionsToggle.init();
+            $( document ).ready(function() {
+                Suit.ListActionsToggle.init();
+            });
         </script>
     {% elif adminform %}
         <script type="text/javascript">
 
+            $( document ).ready(function() {
             Suit.$("#{{ opts.model_name }}_form").suitFormDebounce();
 
             {% if 'form_submit_on_right'|suit_conf:request %}
@@ -112,6 +116,7 @@
                     Suit.$('#suit_form_tabs').suitFormTabs();
                 });
             {% endif %}
+            });
         </script>
     {% endif %}
 
