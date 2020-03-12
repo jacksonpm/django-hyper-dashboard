@@ -86,3 +86,9 @@
 {#    </div>#}
     {{ block.super }}
 {% endblock %}
+
+
+{% block footer %}
+{{ block.super }}
+<script src="{% static 'hyper/js/date-picker-br.js' %}"></script>
+{% endblock %}
