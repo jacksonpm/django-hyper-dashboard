@@ -13,14 +13,17 @@ window.onload = function() {
         format: "dd/mm/yyyy",
         titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
         weekStart: 0
-    }});
+    }
 
-
-   $('[data-input]').datepicker({
+    $('[data-input-br]').datepicker({
         language: "pt-BR",
         weekHeader: 'Sm',
-        orientation: "top auto",
-        format: "dd/mm/yyyy",
+        orientation: "auto",
         todayBtn: true,
+        titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+        weekStart: 0
     })
+
+    });
+
 }

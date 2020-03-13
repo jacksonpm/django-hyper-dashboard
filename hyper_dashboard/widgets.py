@@ -96,7 +96,7 @@ def _make_attrs(attrs, defaults=None, classes=None):
 class DateInputCustom(EnclosedInput, DateInput):
 
     def __init__(self, attrs=None, prepend=None, append=None, prepend_class='addon', append_class='addon'):
-        attrs = {'data-input': 'true'}
+        attrs = {'data-input-br': 'true'}
         super().__init__(attrs, prepend, append, prepend_class, append_class)
 
 
