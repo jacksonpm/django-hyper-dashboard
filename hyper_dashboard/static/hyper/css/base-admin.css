@@ -1,6 +1,10 @@
 
 /* Css para sobreescrever estilização do css do SUIT ADMIN */
 
+.related-widget-wrapper {
+    display: inline-flex;
+}
+
 #container {
     min-height: 500px;
 }
