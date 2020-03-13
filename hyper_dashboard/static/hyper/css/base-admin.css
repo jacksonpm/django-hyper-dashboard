@@ -558,3 +558,7 @@ body.suit_layout_horizontal #header #branding, body.suit_layout_horizontal #head
 .datepicker td, .datepicker th {
     border-radius: 0% !important;
 }
+
+[data-input-br] {
+    max-width: 110px;
+}
