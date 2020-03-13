@@ -6,16 +6,16 @@
 {% block extrastyle %}
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>-->
 
-    <link href="{% static 'external/css/select2.min.css' %}" rel="stylesheet" />
+<!--    <link href="{% static 'external/css/select2.min.css' %}" rel="stylesheet" />-->
 
     <!-- Boostrap Toggle -->
     <link href="{% static 'external/css/bootstrap4-toggle.min.css' %}" rel="stylesheet">
 
     <!-- toast -->
     <link href="{% static 'hyper/css/toast.css' %}" rel="stylesheet"/>
-    <link href="{% static 'hyper/css/select2.css' %}" rel="stylesheet"/>
+<!--    <link href="{% static 'hyper/css/select2.css' %}" rel="stylesheet"/>-->
 
     <!-- navbar -->
     <link href="{% static 'hyper/css/style.css' %}" rel="stylesheet"/>
@@ -31,6 +31,10 @@
 
     <!-- Select2 -->
     <link href="{% static 'external/css/bootstrap-select.min.css' %}" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="{% static 'external/css/font-awesome.css' %}" rel="stylesheet">
+
 {% endblock %}
 
 {% block bodyclass %}{{ block.super|suit_body_class:request }}{% endblock %}

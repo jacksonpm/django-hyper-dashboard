@@ -1,7 +1,5 @@
 
 /* Css para sobreescrever estilização do css do SUIT ADMIN */
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 
 #container {
     min-height: 500px;
