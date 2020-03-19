@@ -76,9 +76,11 @@
         </footer>
     {% endif %}
 
+    <script src="{% static '/suit/js/suit.js' %}"></script>
 
     <!-- Sweet Alert Customizado -->
     <script src="{% static '/hyper/js/alertas.js' %}"></script>
+
 
     <!-- Máscaras -->
     <script src="{% static '/external/js/jquery.mask.js' %}"></script>
@@ -98,14 +100,8 @@
 
     <!-- jquery validate -->
     <script src="{% static '/hyper/js/jquery.validate.min.js' %}"></script>
-
-    {% if cl.formset or action_form and 'toggle_changelist_top_actions'|suit_conf:request %}
-        <script type="text/javascript">
-            $( document ).ready(function() {
-                Suit.ListActionsToggle.init();
-            });
-        </script>
-    {% elif adminform %}
+            
+    {% if adminform %}
         <script type="text/javascript">
 
             $( document ).ready(function() {
