@@ -574,3 +574,7 @@ fieldset .form-row label.required:after, fieldset .suit-form .form-group label.r
     background-color: #38b4fc !important;
     color: white !important;
 }
+
+.errorlist {
+    color: #e25d5d;
+}
