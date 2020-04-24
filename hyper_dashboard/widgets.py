@@ -3,6 +3,28 @@ from django.db import models
 from django.forms import Textarea, TextInput, ClearableFileInput, CheckboxInput, DateInput
 from django.utils.safestring import mark_safe
 
+from django.forms import CharField
+from django.forms.widgets import TimeInput, TextInput
+
+
+class TimePickerInput(TimeInput):
+    template_name = 'widgets/timepicker.html'
+
+class URLDisplayInput(TextInput):
+    template_name = 'widgets/url.html'
+    pre = ''
+    is_required = False
+    show_full_url = True
+
+    def get_context(self, name, value, attrs):
+        context = super().get_context(name, value, attrs)
+        context['widget']['pre'] = self.pre
+        context['widget']['show_full_url'] = self.show_full_url
+        return context
+
+
+class URLDisplay(CharField):
+    widget = URLDisplayInput
 
 class AutosizedTextarea(Textarea):
     """
