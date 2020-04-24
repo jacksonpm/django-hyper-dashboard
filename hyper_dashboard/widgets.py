@@ -1,5 +1,6 @@
 from django import forms
-from django.forms import Textarea, TextInput, ClearableFileInput
+from django.db import models
+from django.forms import Textarea, TextInput, ClearableFileInput, CheckboxInput, DateInput
 from django.utils.safestring import mark_safe
 
 from django.forms import CharField
@@ -9,10 +10,9 @@ from django.forms.widgets import TimeInput, TextInput
 class TimePickerInput(TimeInput):
     template_name = 'widgets/timepicker.html'
 
-
 class URLDisplayInput(TextInput):
     template_name = 'widgets/url.html'
-    pre = '/teste'
+    pre = ''
     is_required = False
     show_full_url = True
 
@@ -25,7 +25,6 @@ class URLDisplayInput(TextInput):
 
 class URLDisplay(CharField):
     widget = URLDisplayInput
-
 
 class AutosizedTextarea(Textarea):
     """
@@ -41,7 +40,7 @@ class AutosizedTextarea(Textarea):
         return forms.Media(js=('suit/js/autosize.min.js',))
 
     def render(self, name, value, attrs=None, renderer=None):
-        output = super(AutosizedTextarea, self).render(name, value, attrs,renderer)
+        output = super(AutosizedTextarea, self).render(name, value, attrs, renderer)
         output += mark_safe(
             "<script type=\"text/javascript\">django.jQuery(function () { autosize(document.getElementById('id_%s')); });</script>"
             % name)
@@ -63,7 +62,7 @@ class CharacterCountTextarea(AutosizedTextarea):
 
 class ImageWidget(ClearableFileInput):
     def render(self, name, value, attrs=None, renderer=None):
-        html = super(ImageWidget, self).render(name, value, attrs,renderer)
+        html = super(ImageWidget, self).render(name, value, attrs, renderer)
         if not value or not hasattr(value, 'url') or not value.url:
             return html
         html = u'<div class="ImageWidget"><div class="float-xs-left">' \
@@ -114,3 +113,24 @@ def _make_attrs(attrs, defaults=None, classes=None):
     if classes:
         result["class"] = " ".join((classes, result.get("class", "")))
     return result
+
+
+class DateInputCustom(EnclosedInput, DateInput):
+
+    def __init__(self, attrs=None, prepend=None, append=None, prepend_class='addon', append_class='addon'):
+        attrs = {'data-input-br': 'true'}
+        super().__init__(attrs, prepend, append, prepend_class, append_class)
+
+
+formfield_overrides_base = {
+    models.DateField: {'widget': DateInputCustom(append='fa-calendar'), },
+    models.TextField: {'widget': AutosizedTextarea()},
+    models.BooleanField: {'widget': CheckboxInput(
+        attrs={
+            "data-toggle": "toggle",
+            "data-on": 'Sim',
+            "data-size": 'sm',
+            "data-off": 'Não'
+        },
+    )}
+}

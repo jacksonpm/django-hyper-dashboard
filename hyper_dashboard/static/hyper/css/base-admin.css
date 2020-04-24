@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 
+.related-widget-wrapper {
+    display: flex;
+}
+
 #container {
     min-height: 500px;
 }
@@ -553,4 +557,24 @@ body.suit_layout_horizontal #header #branding, body.suit_layout_horizontal #head
 
 .datepicker td, .datepicker th {
     border-radius: 0% !important;
+}
+
+[data-input-br] {
+    max-width: 110px;
+}
+
+fieldset .form-row label.required:after, fieldset .suit-form .form-group label.required:after {
+    content: '*';
+    margin: 0 0 0 5px;
+    position: absolute;
+    color: #f00;
+}
+
+.select2-container--admin-autocomplete .select2-results__option--highlighted[aria-selected] {
+    background-color: #38b4fc !important;
+    color: white !important;
+}
+
+.errorlist {
+    color: #e25d5d;
 }

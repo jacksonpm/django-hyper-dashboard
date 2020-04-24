@@ -12,7 +12,7 @@
                     {% endfor %}
                 {% endif %}
 
-                <input type="submit" value="{% trans 'Search' %}"/>
+                <input class="btn btn-primary" type="submit" value="{% trans 'Search' %}"/>
                 {% if show_result_count %}
                     <span class="small quiet">{% blocktrans count counter=cl.result_count %}{{ counter }} result
                         {% plural %}{{ counter }} results{% endblocktrans %} (<a
