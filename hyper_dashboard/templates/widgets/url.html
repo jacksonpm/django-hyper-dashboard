@@ -1,7 +1,7 @@
 <div class="form-group" >
     <label style="margin-top: 7px">
         {% if widget.value %}
-        <a href="{{widget.pre}}{{widget.value}}">
+        <a target="_blank" href="{{widget.pre}}{{widget.value}}">
             {% if widget.show_full_url %}{{widget.pre}}{% endif %}{{widget.value}}
         </a>
         {% else %}
