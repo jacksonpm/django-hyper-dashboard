@@ -1,7 +1,11 @@
-<div class="form-group">
-    <label class="mt-1">
-        <a href="{{widget.pre}}/{{widget.value}}">
-            {% if widget.show_full_url %}{{widget.pre}}/{% endif %}{{widget.value}}
+<div class="form-group" >
+    <label style="margin-top: 7px">
+        {% if widget.value %}
+        <a href="{{widget.pre}}{{widget.value}}">
+            {% if widget.show_full_url %}{{widget.pre}}{% endif %}{{widget.value}}
         </a>
+        {% else %}
+        -
+        {% endif %}
     </label>
 </div>
