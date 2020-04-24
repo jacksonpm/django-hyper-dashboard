@@ -1,0 +1,5 @@
+include README.rst
+include LICENSE
+recursive-include docs *
+recursive-include hyper_dashboard/static *
+recursive-include hyper_dashboard/templates *
