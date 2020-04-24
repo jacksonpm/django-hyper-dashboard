@@ -10,6 +10,7 @@ from django.forms.widgets import TimeInput, TextInput
 class TimePickerInput(TimeInput):
     template_name = 'widgets/timepicker.html'
 
+
 class URLDisplayInput(TextInput):
     template_name = 'widgets/url.html'
     pre = ''
@@ -25,6 +26,15 @@ class URLDisplayInput(TextInput):
 
 class URLDisplay(CharField):
     widget = URLDisplayInput
+
+    def __init__(self, *, max_length=None, min_length=None, strip=True, empty_value='', pre='', **kwargs):
+        self.widget.pre = pre
+        kwargs['required'] = False
+        super().__init__(max_length=max_length, min_length=min_length, strip=strip, empty_value=empty_value, **kwargs)
+
+    def widget_attrs(self, widget):
+        return super().widget_attrs(widget)
+
 
 class AutosizedTextarea(Textarea):
     """
