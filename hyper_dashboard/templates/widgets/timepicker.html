@@ -1,0 +1,11 @@
+<div class="form-group">
+
+    <div class="input-group" style="width: 140px;">
+        <input type="text" id="id_{{widget.name}}" name="{{widget.name}}"
+               data-show-meridian="false" {% if widget.value %}value="{{widget.value}}"{% endif %}
+               data-toggle='timepicker' data-minute-step="5">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+        </div>
+    </div>
+</div>
