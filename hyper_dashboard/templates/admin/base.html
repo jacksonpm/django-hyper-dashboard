@@ -52,9 +52,7 @@
 {% endblock %}
 
 {% block nav-global %}
-    {% cache 500 menu request.user.username %}
-        {% include 'suit/menu.html' %}
-    {% endcache %}
+{% include 'suit/menu.html' %}
 {% endblock %}
 
 {% block footer %}
