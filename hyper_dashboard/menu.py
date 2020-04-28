@@ -279,6 +279,7 @@ class MenuManager(object):
         url_name = self.context.get('url_name')
 
         request_path = str(self.request.path)
+        request_path_trim = str(self.request.path).strip('/')
 
         for parent_item in menu_items:
             if not active_child:
@@ -287,6 +288,8 @@ class MenuManager(object):
                         active_child = child_item
                         break
                     elif not active_child_by_url and request_path == child_item.url:
+                        active_child_by_url = child_item
+                    elif request_path_trim in child_item.url:
                         active_child_by_url = child_item
 
             if active_child:
