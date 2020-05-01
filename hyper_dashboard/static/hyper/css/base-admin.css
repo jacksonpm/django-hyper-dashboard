@@ -4,7 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 
 .related-widget-wrapper {
-    display: flex;
+    display: inline;
+}
+
+
+.related-widget-wrapper select {
+    margin-bottom: 8px;
+}
+
+.related-widget-wrapper .select2 {
+    margin-bottom: 8px;
 }
 
 #container {
