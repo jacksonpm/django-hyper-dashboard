@@ -289,7 +289,7 @@ class MenuManager(object):
                         break
                     elif not active_child_by_url and request_path == child_item.url:
                         active_child_by_url = child_item
-                    elif child_item.url.strip('/') in request_path_trim:
+                    elif child_item.url.strip('/') == request_path_trim:
                         active_child_by_url = child_item
 
             if active_child:
