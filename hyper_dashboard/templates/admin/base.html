@@ -88,8 +88,11 @@
 
             $( document ).ready(function() {
             $.fn.selectpicker.Constructor.DEFAULTS.noneSelectedText = 'Nenhum selecionado';
+            $.fn.selectpicker.Constructor.DEFAULTS.deselectAllText = 'Desmarcar Todos';
+            $.fn.selectpicker.Constructor.DEFAULTS.selectAllText = 'Marcar Todos';
+            $.fn.selectpicker.Constructor.DEFAULTS.width = '400px';
+            $.fn.selectpicker.Constructor.DEFAULTS.actionsBox = true;
             Suit.$("#{{ opts.model_name }}_form").suitFormDebounce();
-
             {% if 'form_submit_on_right'|suit_conf:request %}
                 Suit.FixedBar.init();
             {% endif %}
