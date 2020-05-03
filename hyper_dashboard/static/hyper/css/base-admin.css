@@ -587,3 +587,11 @@ fieldset .form-row label.required:after, fieldset .suit-form .form-group label.r
 .errorlist {
     color: #e25d5d;
 }
+
+.bootstrap-select .dropdown-menu li a {
+    color: #000000db;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    color: #000000e0;
+}
