@@ -82,11 +82,12 @@
     <script src="{% static 'external/js/bootstrap-select.min.js' %}"></script>
     <!-- jquery validate -->
     <script src="{% static 'hyper/js/jquery.validate.min.js' %}"></script>
-            
+
     {% if adminform %}
         <script type="text/javascript">
 
             $( document ).ready(function() {
+            $.fn.selectpicker.Constructor.DEFAULTS.noneSelectedText = 'Nenhum selecionado';
             Suit.$("#{{ opts.model_name }}_form").suitFormDebounce();
 
             {% if 'form_submit_on_right'|suit_conf:request %}
