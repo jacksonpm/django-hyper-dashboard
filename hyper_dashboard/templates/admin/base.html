@@ -67,6 +67,7 @@
     {% endif %}
 
     <script src="{% static 'suit/js/suit.js' %}"></script>
+
     <!-- Sweet Alert Customizado -->
     <script src="{% static 'hyper/js/alertas.js' %}"></script>
     <!-- Máscaras -->
@@ -82,6 +83,8 @@
     <script src="{% static 'external/js/bootstrap-select.min.js' %}"></script>
     <!-- jquery validate -->
     <script src="{% static 'hyper/js/jquery.validate.min.js' %}"></script>
+
+    <script src="{% static 'hyper/js/utils.js' %}"></script>
             
     {% if adminform %}
         <script type="text/javascript">
@@ -101,16 +104,5 @@
             });
         </script>
     {% endif %}
-
-    <script>
-
-        function resize_for_popup() {
-            if(/[?&]_popup=1(&|$)/.test(location.href)) {
-                window.resizeTo(screen.availWidth, screen.availHeight);
-            }
-        }
-
-        resize_for_popup();
-    </script>
 
 {% endblock %}
