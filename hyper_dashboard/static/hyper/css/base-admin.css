@@ -90,6 +90,10 @@ label {
     font-weight: 500;
 }
 
+#changelist-form {
+    max-width: calc(100% - 200px);
+}
+
 #changelist #changelist-filter h3 {
     background-color: #3e464c !important
 }
