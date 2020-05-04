@@ -91,7 +91,7 @@ label {
 }
 
 #changelist-form {
-    max-width: calc(100% - 200px);
+    max-width: calc(100% - 250px);
 }
 
 #changelist #changelist-filter h3 {
