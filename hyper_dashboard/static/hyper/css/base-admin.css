@@ -195,7 +195,7 @@ fieldset {
     #content {
         margin-left: auto;
         margin-right: auto;
-        width: 97%;
+        width: 98%;
     }
 }
 
@@ -207,11 +207,11 @@ fieldset {
     }
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1700px){
     #content {
         margin-left: auto;
         margin-right: auto;
-        width: 83%;
+        width: 84%;
     }
 }
 
@@ -586,4 +586,12 @@ fieldset .form-row label.required:after, fieldset .suit-form .form-group label.r
 
 .errorlist {
     color: #e25d5d;
+}
+
+.bootstrap-select .dropdown-menu li a {
+    color: #000000db;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    color: #000000e0;
 }
