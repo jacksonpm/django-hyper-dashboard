@@ -7,6 +7,9 @@
     display: inline;
 }
 
+.closelink {
+    font-size: 1rem;
+}
 
 .related-widget-wrapper select {
     margin-bottom: 8px;
