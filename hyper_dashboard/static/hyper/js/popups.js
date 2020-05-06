@@ -17,7 +17,7 @@ $(document).ready(function () {
             }
         }
 
-        var win = window.open(href, name, 'height=' + screen.availHeight ',width=' + screen.availWidth + ',resizable=yes,scrollbars=yes');
+        var win = window.open(href, name, 'height=' + screen.availHeight + ',width=' + screen.availWidth + ',resizable=yes,scrollbars=yes');
         win.focus();
         return false;
     }
