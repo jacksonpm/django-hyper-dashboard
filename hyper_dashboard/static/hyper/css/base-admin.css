@@ -23,6 +23,10 @@
     min-height: 500px;
 }
 
+.empty-form {
+    display: none !important;
+}
+
 .nav-tabs {
     border-bottom: 0px;
 }
