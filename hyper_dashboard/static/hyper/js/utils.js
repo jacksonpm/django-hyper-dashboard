@@ -8,7 +8,7 @@ function alterarItem(elemento) {
 
 function resize_for_popup() {
     if(/[?&]_popup=1(&|$)/.test(location.href)) {
-        window.resizeTo(screen.availWidth, screen.availHeight);
+        window.resizeTo();
     }
 }
 
