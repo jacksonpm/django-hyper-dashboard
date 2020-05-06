@@ -239,7 +239,7 @@ fieldset .form-row > label, fieldset .suit-form .form-group > label {
 }
 
 tr.form-row {
-    display: table-row !important;
+    display: table-row;
 }
 
 
