@@ -602,3 +602,8 @@ fieldset .form-row label.required:after, fieldset .suit-form .form-group label.r
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
     color: #000000e0;
 }
+
+.div-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
