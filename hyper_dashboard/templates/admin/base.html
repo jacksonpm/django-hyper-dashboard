@@ -34,9 +34,6 @@
 
 {% block pretitle %}
 <div class="content-wrap">
-    {% block messages %}
-    {% include 'admin/messages.html' %}
-    {% endblock messages %}
 {% endblock %}
 
 
@@ -108,5 +105,9 @@
             });
         </script>
     {% endif %}
+
+    {% block messages %}
+    {% include 'admin/messages.html' %}
+    {% endblock messages %}
 
 {% endblock %}
