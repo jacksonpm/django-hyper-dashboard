@@ -1,0 +1,11 @@
+<div class="form-group" >
+    <label style="margin-top: 7px">
+        {% if widget.value %}
+            {% autoescape on %}
+                {{widget.value}}
+            {% endautoescape %}
+        {% else %}
+        -
+        {% endif %}
+    </label>
+</div>

@@ -1,10 +1,9 @@
 from django import forms
 from django.db import models
-from django.forms import Textarea, TextInput, ClearableFileInput, CheckboxInput, DateInput
-from django.utils.safestring import mark_safe
-
 from django.forms import CharField
+from django.forms import Textarea, ClearableFileInput, CheckboxInput, DateInput
 from django.forms.widgets import TimeInput, TextInput
+from django.utils.safestring import mark_safe
 
 
 class TimePickerInput(TimeInput):
@@ -22,6 +21,19 @@ class URLDisplayInput(TextInput):
         context['widget']['pre'] = self.pre
         context['widget']['show_full_url'] = self.show_full_url
         return context
+
+
+class DisplayInput(TextInput):
+    template_name = 'widgets/display.html'
+    is_required = False
+
+
+class DisplayField(CharField):
+    widget = DisplayInput
+
+    def __init__(self, *largs, **kwargs):
+        kwargs['required'] = False
+        super().__init__(*largs, **kwargs)
 
 
 class URLDisplay(CharField):
@@ -132,15 +144,17 @@ class DateInputCustom(EnclosedInput, DateInput):
         super().__init__(attrs, prepend, append, prepend_class, append_class)
 
 
+class SwitchInput(CheckboxInput):
+    input_type = 'checkbox'
+    template_name = 'widgets/switch.html'
+
+
 formfield_overrides_base = {
     models.DateField: {'widget': DateInputCustom(append='fa-calendar'), },
     models.TextField: {'widget': AutosizedTextarea()},
-    models.BooleanField: {'widget': CheckboxInput(
+    models.BooleanField: {'widget': SwitchInput(
         attrs={
-            "data-toggle": "toggle",
-            "data-on": 'Sim',
-            "data-size": 'sm',
-            "data-off": 'Não'
+            "data-switch": "success",
         },
     )}
 }
