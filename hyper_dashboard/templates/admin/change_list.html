@@ -25,11 +25,12 @@
     {{ block.super }}
     {% if cl.has_filters %}
         <script type="text/javascript">
-            if ($('#changelist-filter').length == 0) {
-                $("#changelist-form").css("max-width","100%");
-            }
             // Handle change list filter null values
             Suit.$('.search-filter').suitSearchFilters();
         </script>
+    {% else %}
+    <script>
+        $("#changelist-form").css("max-width","100%");
+    </script>
     {% endif %}
 {% endblock %}
