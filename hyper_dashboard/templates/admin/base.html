@@ -5,8 +5,6 @@
 {% block stylesheet %}{% static "suit/css/suit.css" %}{% endblock %}
 
 {% block extrastyle %}
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Boostrap Toggle -->
     <link href="{% static 'external/css/bootstrap4-toggle.min.css' %}" rel="stylesheet">
     <!-- toast -->
@@ -36,9 +34,6 @@
 
 {% block pretitle %}
 <div class="content-wrap">
-    {% block messages %}
-    {% include 'admin/messages.html' %}
-    {% endblock messages %}
 {% endblock %}
 
 
@@ -75,7 +70,10 @@
     <script src="{% static 'external/js/sweet.alert.js' %}"></script>
     <!-- Vendor e App -->
     <script src="{% static 'hyper/js/vendor.min.js' %}"></script>
+
     <script src="{% static 'hyper/js/app.min.js' %}"></script>
+
+    <script src="{% static 'hyper/js/date-picker-br.js' %}"></script>
     <!-- Boostrap Toggle -->
 <!--    <script src="{% static 'external/js/bootstrap.toggle.js' %}"></script>-->
     <!-- Multiselect -->
@@ -107,5 +105,9 @@
             });
         </script>
     {% endif %}
+
+    {% block messages %}
+    {% include 'admin/messages.html' %}
+    {% endblock messages %}
 
 {% endblock %}

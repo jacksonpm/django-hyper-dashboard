@@ -537,4 +537,4 @@
             $.applyDataMask();
         }
     }, globals.watchInterval);
-}, window.jQuery, window.Zepto));
+}, django.jQuery, window.Zepto));
