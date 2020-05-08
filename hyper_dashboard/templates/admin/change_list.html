@@ -23,9 +23,9 @@
 
 {% block footer %}
     {{ block.super }}
-
     {% if cl.has_filters %}
         <script type="text/javascript">
+            $("#changelist-form").css("max-width","100%");
             // Handle change list filter null values
             Suit.$('.search-filter').suitSearchFilters();
         </script>
