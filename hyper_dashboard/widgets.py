@@ -148,13 +148,17 @@ class SwitchInput(CheckboxInput):
     input_type = 'checkbox'
     template_name = 'widgets/switch.html'
 
+    def __init__(self, attrs=None, check_test=None):
+        if attrs is None:
+            attrs = {'data-switch' : 'success'}
+        else:
+            attrs.update({'data-switch': 'success'})
+
+        super().__init__(attrs, check_test)
+
 
 formfield_overrides_base = {
     models.DateField: {'widget': DateInputCustom(append='fa-calendar'), },
     models.TextField: {'widget': AutosizedTextarea()},
-    models.BooleanField: {'widget': SwitchInput(
-        attrs={
-            "data-switch": "success",
-        },
-    )}
+    models.BooleanField: {'widget': SwitchInput()}
 }
