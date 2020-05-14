@@ -391,7 +391,7 @@ body.suit_layout_vertical #suit-nav > ul > li:not(.active):hover > ul > li > a:h
 .btn-primary {
     color: #fff;
     background-color: #39a6ff !important;
-    border-color: #00000021 !important;
+    border-color: #ffffff21 !important;
 }
 
 .table {
