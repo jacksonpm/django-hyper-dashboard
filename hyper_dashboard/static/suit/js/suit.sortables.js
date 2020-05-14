@@ -175,9 +175,9 @@
         $('.suit-sortable').suit_list_sortable();
     });
 
-}(django.jQuery));
+}(jQuery));
 
 // Call Suit.after_inline
-django.jQuery(document).on('formset:added', function (e, row, prefix) {
+jQuery(document).on('formset:added', function (e, row, prefix) {
     Suit.after_inline.run(prefix, row);
 });
