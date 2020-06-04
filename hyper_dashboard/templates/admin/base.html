@@ -5,21 +5,12 @@
 {% block stylesheet %}{% static "suit/css/suit.css" %}{% endblock %}
 
 {% block extrastyle %}
-    <!-- Boostrap Toggle -->
-    <link href="{% static 'external/css/bootstrap4-toggle.min.css' %}" rel="stylesheet">
-    <!-- toast -->
     <link href="{% static 'hyper/css/toast.css' %}" rel="stylesheet"/>
-    <!-- navbar -->
     <link href="{% static 'hyper/css/style.css' %}" rel="stylesheet"/>
-    <!-- Baseadmin -->
     <link href="{% static 'hyper/css/base-admin.css' %}" rel="stylesheet"/>
-    <!-- Nav -->
     <link href="{% static 'hyper/css/navbar.css' %}" rel="stylesheet"/>
-    <!-- md icons -->
     <link href="{% static 'external/css/material.icons.css' %}" rel="stylesheet"/>
-    <!-- Select2 -->
     <link href="{% static 'external/css/bootstrap-select.min.css' %}" rel="stylesheet">
-    <!-- Icons -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 {% endblock %}
 
@@ -35,9 +26,6 @@
 {% block pretitle %}
 <div class="content-wrap">
 {% endblock %}
-
-
-
 
 {% block sidebar %}
     </div> <!-- Close content-wrap -->
@@ -60,27 +48,15 @@
             </div>
         </footer>
     {% endif %}
-
-    <script src="{% static 'suit/js/suit.js' %}"></script>
-    <!-- Sweet Alert Customizado -->
-    <script src="{% static 'hyper/js/alertas.js' %}"></script>
-    <!-- Máscaras -->
-    <script src="{% static 'external/js/jquery.mask.js' %}"></script>
-    <!-- Sweet Alert -->
-    <script src="{% static 'external/js/sweet.alert.js' %}"></script>
-    <!-- Vendor e App -->
     <script src="{% static 'hyper/js/vendor.min.js' %}"></script>
-
     <script src="{% static 'hyper/js/app.min.js' %}"></script>
-
+    <script src="{% static 'suit/js/suit.js' %}"></script>
+    <script src="{% static 'hyper/js/alertas.js' %}"></script>
+    <script src="{% static 'external/js/jquery.mask.js' %}"></script>
+    <script src="{% static 'external/js/sweet.alert.js' %}"></script>
     <script src="{% static 'hyper/js/date-picker-br.js' %}"></script>
-    <!-- Boostrap Toggle -->
-<!--    <script src="{% static 'external/js/bootstrap.toggle.js' %}"></script>-->
-    <!-- Multiselect -->
     <script src="{% static 'external/js/bootstrap-select.min.js' %}"></script>
-    <!-- jquery validate -->
     <script src="{% static 'hyper/js/jquery.validate.min.js' %}"></script>
-
     <script src="{% static 'hyper/js/utils.js' %}"></script>
 
     {% if adminform %}
