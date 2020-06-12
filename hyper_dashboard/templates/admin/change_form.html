@@ -1,5 +1,6 @@
 {% extends 'admin/change_form.html' %}
 {% load suit_forms %}
+{% load static %}
 
 {% block content  %}
 <div class="page-title">
@@ -41,8 +42,6 @@
 {% endblock %}
 
 {% block inline_field_sets %}
-{#    {% suit_form_conf 'form_inlines_hide_original' as suit_form_inlines_hide_original %}#}
-{#    {{ suit_form_inlines_hide_original }}#}
     {% for inline_admin_formset in inline_admin_formsets %}
         {% suit_form_conf 'form_inlines_hide_original' inline_admin_formset as suit_form_inlines_hide_original %}
         <div class="{{ inline_admin_formset.opts.suit_classes }} {% if suit_form_inlines_hide_original %} suit-inlines-hide-original{% endif %}">
@@ -61,8 +60,6 @@
 
 {% block after_related_objects %}
     {{ block.super }}
-
-    {# render suit_form_includes at last position #}
     {% include 'suit/change_form_includes.html' with position='bottom' %}
 
     <!-- Close left column, and that empty div -->
@@ -75,14 +72,9 @@
 
 
 {% block admin_change_form_document_ready %}
-    {# Move object-tools inside rigth column #}
     {% block object-tools %}
         {{ block.super }}
     {% endblock %}
-
-    <!-- Close right column and row -->
     </div>
-{#    </div>#}
     {{ block.super }}
-    <script src="/static/hyper/js/popups.js"></script>
 {% endblock %}
