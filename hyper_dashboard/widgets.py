@@ -88,7 +88,7 @@ class ImageWidget(ClearableFileInput):
         if not value or not hasattr(value, 'url') or not value.url:
             return html
         html = u'<div class="ImageWidget"><div class="float-xs-left">' \
-               u'<a href="%s" target="_blank"><img src="%s" width="75"></a></div>' \
+               u'<a href="%s" target="_blank"><img class="rounded-lg" src="%s" width="75"></a></div>' \
                u'%s</div>' % (value.url, value.url, html)
         return mark_safe(html)
 
@@ -150,7 +150,7 @@ class SwitchInput(CheckboxInput):
 
     def __init__(self, attrs=None, check_test=None):
         if attrs is None:
-            attrs = {'data-switch' : 'success'}
+            attrs = {'data-switch': 'success'}
         else:
             attrs.update({'data-switch': 'success'})
 
