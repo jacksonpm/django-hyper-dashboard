@@ -3,9 +3,11 @@
 {% load static %}
 
 {% block content  %}
-<div class="page-title">
-    {{opts.verbose_name}}
-</div>
+  {% if not hide_title %}
+  <div class="page-title">
+     {{opts.verbose_name}}
+  </div>
+  {% endif %}
 {{block.super}}
 {% endblock %}
 
