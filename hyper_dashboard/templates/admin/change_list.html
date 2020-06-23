@@ -2,9 +2,11 @@
 {% load i18n admin_list suit_list %}
 
 {% block content %}
+  {% if not hide_title %}
   <div class="page-title">
      {{opts.verbose_name_plural}}
   </div>
+  {% endif %}
 {{ block.super }}
 {% endblock %}
 
