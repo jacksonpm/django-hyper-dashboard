@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 gulp.task('js', function () {
+
    return gulp
       .src([
           'hyper_dashboard/static/hyper/js/vendor.min.js',
