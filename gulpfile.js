@@ -23,7 +23,6 @@ gulp.task('js', function () {
 gulp.task('css', function () {
    return gulp
       .src([
-          'hyper_dashboard/static/hyper/css/suit.css',
           'hyper_dashboard/static/hyper/css/toast.css',
           'hyper_dashboard/static/hyper/css/style.css',
           'hyper_dashboard/static/hyper/css/base-admin.css',
