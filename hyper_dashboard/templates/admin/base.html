@@ -5,12 +5,7 @@
 {% block stylesheet %}{% static "suit/css/suit.css" %}{% endblock %}
 
 {% block extrastyle %}
-    <link href="{% static 'hyper/css/toast.css' %}" rel="stylesheet"/>
-    <link href="{% static 'hyper/css/style.css' %}" rel="stylesheet"/>
-    <link href="{% static 'hyper/css/base-admin.css' %}" rel="stylesheet"/>
-    <link href="{% static 'hyper/css/navbar.css' %}" rel="stylesheet"/>
-    <link href="{% static 'external/css/material.icons.css' %}" rel="stylesheet"/>
-    <link href="{% static 'external/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'hyper/css/app.css' %}" rel="stylesheet"/>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 {% endblock %}
 
@@ -48,16 +43,7 @@
             </div>
         </footer>
     {% endif %}
-    <script src="{% static 'hyper/js/vendor.min.js' %}"></script>
-    <script src="{% static 'hyper/js/app.min.js' %}"></script>
-    <script src="{% static 'suit/js/suit.js' %}"></script>
-    <script src="{% static 'hyper/js/alertas.js' %}"></script>
-    <script src="{% static 'external/js/jquery.mask.js' %}"></script>
-    <script src="{% static 'external/js/sweet.alert.js' %}"></script>
-    <script src="{% static 'hyper/js/date-picker-br.js' %}"></script>
-    <script src="{% static 'external/js/bootstrap-select.min.js' %}"></script>
-    <script src="{% static 'hyper/js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'hyper/js/utils.js' %}"></script>
+    <script src="{% static 'hyper/js/app.js' %}"></script>
 
     {% if adminform %}
         <script src="{% static 'hyper/js/popups.js' %}"></script>

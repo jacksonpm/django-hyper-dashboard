@@ -1,49 +1,36 @@
-'use strict';
+var gulp = require('gulp'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var autoprefixer = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
-
-var config = {
-    djangoHost: 'localhost',
-    djangoPort: 8000,
-    jsPort: 8001,
-    watchSassFiles: 'suit/sass/**/*.scss',
-    cssOutputDir: 'suit/static/suit/css/',
-    watchHtmlFiles: [
-        'suit/templates/**/*.html',
-        'demo/demo/templates/**/*.html'
-    ]
-};
-
-gulp.task('styles', function () {
-    return gulp.src(config.watchSassFiles)
-        .pipe(plumber())
-        .pipe(sass({outputStyle: 'compact'})).on('error', sass.logError)
-        .pipe(autoprefixer({browsers: ['last 2 version', '> 5%']}))
-        .pipe(gulp.dest(config.cssOutputDir))
-        .pipe(reload({stream: true}))
-        ;
+gulp.task('js', function () {
+   return gulp
+      .src([
+          'static/hyper/js/vendor.min.js',
+          'static/hyper/js/app.min.js',
+          'static/suit/js/suit.js',
+          'static/hyper/js/alertas.js',
+          'static/external/js/jquery.mask.js',
+          'static/external/js/sweet.alert.js',
+          'static/hyper/js/date-picker-br.js',
+          'static/external/js/bootstrap-select.min.js',
+          'static/hyper/js/jquery.validate.min.js',
+          'static/hyper/js/utils.js',
+      ])
+      .pipe(concat('app.js'))
+      .pipe(gulp.dest('hyper_dashboard/static/hyper/js'));
 });
 
-gulp.task('watch', function () {
-    browserSync({
-        port: config.jsPort,
-        ui: false,
-        notify: false,
-        ghostMode: false,
-        https: false,
-        startPath: '/admin/',
-        proxy: {
-            target: config.djangoHost + ':' + config.djangoPort
-        }
-    });
-
-    gulp.watch(config.watchSassFiles, ['styles']);
-    gulp.watch(config.watchHtmlFiles).on('change', reload);
+gulp.task('css', function () {
+   return gulp
+      .src([
+          'static/hyper/css/toast.css',
+          'static/hyper/css/style.css',
+          'static/hyper/css/base-admin.css',
+          'static/hyper/css/navbar.css',
+          'static/external/css/material.icons.css',
+          'static/external/css/bootstrap-select.min.css',
+      ])
+      .pipe(concat('app.css'))
+      .pipe(gulp.dest('hyper_dashboard/static/hyper/css'));
 });
 
-gulp.task('default', ['styles', 'watch']);
