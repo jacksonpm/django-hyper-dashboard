@@ -185,6 +185,7 @@ body.suit_layout_horizontal #suit-sub-nav ul > li > a {
 }
 
 a {
+    font-weight: 600;
     color: #4298de;
     text-decoration: none;
 }
